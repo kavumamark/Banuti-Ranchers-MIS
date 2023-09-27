@@ -1,0 +1,47 @@
+[{
+  "id": 1,
+  "animal_name": "Cattle",
+  "gender": ["Male"],
+  "stages": "2"
+},
+{
+  "id": 2,
+  "animal_name": "Goats",
+  "gender": "Female",
+  "stages": "2"
+},{
+  "id": 3,
+  "animal_name": "Sheep",
+  "gender": "Female",
+  "stages": "2"
+},{
+  "id": 4,
+  "animal_name": "Pigs",
+  "gender": "Male",
+  "stages": "2"
+},
+{
+  "id": 5,
+  "animal_name": "Goats",
+  "gender": "Male",
+  "stages": "2"
+},
+{
+  "id": 6,
+  "animal_name": "Cattle",
+  "gender": ["Female"],
+  "stages": "2"
+},
+{
+  "id": 7,
+  "animal_name": "Pigs",
+  "gender": "Female",
+  "stages": "2"
+},
+{
+  "id": 8,
+  "animal_name": "Sheep",
+  "gender": "Male",
+  "stages": "2"
+}
+]

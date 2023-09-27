@@ -1,0 +1,25 @@
+{
+    "data": [
+      {
+      "id": "1",
+      "stage_name": "Calf",
+      "life_span": "1 years",
+      "entry_condition": "birth",
+      "exit_condition": "2months old"
+    },
+    {
+      "id": "2",
+      "stage_name": "Heifer",
+      "life_span": "2 years",
+      "entry_condition": "2months old",
+      "exit_condition": "4months old"
+    },
+    {
+      "id": "3",
+      "stage_name": "Yearling",
+      "life_span": "2 months",
+      "entry_condition": "4months old",
+      "exit_condition": "6months old"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+    "root":
+    [  
+        {
+            "key": "0",
+            "data":{  
+                "name":"Monday",
+                "size":"100",
+                "type":"80"
+            },
+            "children":[  
+                {  
+                    "key": "0-0",
+                    "data":{
+                        "name":"Morning",
+                        "size":"65",
+                        "type":"N/A"
+                    }
+                },
+                    
+                {  
+                    "key": "0-2",
+                    "data":{  
+                        "name":"Evening",
+                        "size":"35",
+                        "type":"N/A"
+                    }
+                }
+            ]
+        },
+        {  
+            "key": "1",
+            "data":{  
+                "name":"Tuesday",
+                "size":"250",
+                "type":"200"
+            },
+            "children":[  
+                {  
+                    "key": "1-0",
+                    "data":{  
+                        "name":"Morning",
+                        "size":"190",
+                        "type":"N/A"
+                    }
+                },
+                {  
+                    "key": "1-1",
+                    "data":{  
+                        "name":"Evening",
+                        "size":"60",
+                        "type":"N/A"
+                    }
+                }
+            ]
+        },
+        {  
+            "key": "2",
+            "data": {  
+                "name":"Wednesday",
+                "size":"200",
+                "type":"175"
+            },
+            "children":[  
+                {  
+                    "key": "2-0",
+                    "data":{  
+                        "name":"Morning",
+                        "size":"120",
+                        "type":"N/A"
+                    }
+                },
+                {  
+                    "key": "2-1",
+                    "data":{  
+                        "name":"Evening",
+                        "size":"80",
+                        "type":"N/A"
+                    }
+                }
+            ]
+        },
+        {  
+            "key": "3",
+            "data":{  
+                "name":"Thursday",
+                "size":"300",
+                "type":"270"
+            },
+            "children":[
+                {  
+                    "key": "3-0",
+                    "data":{  
+                        "name":"Morning",
+                        "size":"180",
+                        "type":"N/A"
+                    }
+                },
+                {  
+                    "key": "3-1",
+                    "data":{  
+                        "name":"Evening",
+                        "size":"120",
+                        "type":"N/A"
+                    }
+                }
+            ]
+        },
+        {  
+            "key": "4",
+            "data": {  
+                "name":"Friday",
+                "size":"220",
+                "type":"200"
+            },
+            "children":[  
+                {  
+                    "key": "4-0",
+                    "data": {  
+                        "name":"Morning",
+                        "size":"120",
+                        "type":"N/A"
+                    }
+                },
+                {  
+                    "key": "4-1",
+                    "data":{  
+                        "name":"Evening",
+                        "size":"100",
+                        "type":"N/A"
+                    }
+                }
+            ]
+        },
+        {  
+            "key": "5",
+            "data": {  
+                "name":"Saturday",
+                "size":"215",
+                "type":"195"
+            },
+            "children":[  
+                {  
+                    "key": "5-0",
+                    "data":{  
+                        "name":"Morning",
+                        "size":"150",
+                        "type":"N/A"
+                    }
+                },
+                { 
+                    "key": "5-1", 
+                    "data":{  
+                        "name":"Evening",
+                        "size":"65",
+                        "type":"N/A"
+                    }
+                }
+            ]
+        }
+       
+        
+    ]
+}
