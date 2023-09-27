@@ -79,8 +79,7 @@ function InformationBank() {
                 <TabPanel header="Breeding days">
                     <p className="m-0">
                         <h4>Breeding days</h4>
-                        If you considered sunglasses a mere fashion accessory, think again. A right pair of shades can help you stay away from cataracts, macular degeneration 
-        and pinguecula by blocking out sun’s harmful UV (ultraviolet) rays. A good pair of UV protection sunglasses can block 99 – 100% of harmful UV rays. In case you are wondering, UV protection contact lenses are also available.
+                    The Animals have different breeding days where they breed. These breeeding days can be added to the system.
                     </p>
                 </TabPanel>
                 <TabPanel header="Diary Information">
