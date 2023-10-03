@@ -93,22 +93,20 @@ const App = () => {
             { label: 'Animal Breeds', icon: 'pi pi-fw pi-ellipsis-v', to: '/Breeds' }
          ]
          },
-
-        
-                  {
-                    label: 'Production',
-                    icon: 'pi pi-fw pi-cog',
-                    items: [
-                      { label: 'Milk', icon: 'pi pi-fw pi-bars', to: '/Milk' },
-                      { label: 'Meat', icon: 'pi pi-fw pi-bars', to: '/Meat' },
-                    ]
-                },
+         {
+            label: 'Production',
+            icon: 'pi pi-fw pi-cog',
+            items: [
+            { label: 'Milk', icon: 'pi pi-fw pi-bars', to: '/Milk' },
+            { label: 'Meat', icon: 'pi pi-fw pi-bars', to: '/Meat' },
+            ]
+            },
               
                 {
                     label: 'Information Bank',
                     icon: 'pi pi-fw pi-bar',
                     items: [{ label: 'Information Bank', icon: 'pi pi-fw pi-home', to: '/InformationBank' },
-                    { label: 'AnimalChart', icon: 'pi pi-fw pi-home', to: '/AnimalChart' }]
+                    { label: 'AnimalChart', icon: 'pi pi-fw pi-sitemap', to: '/AnimalChart' }]
                 },
 
                 {
@@ -371,8 +369,7 @@ const App = () => {
                         <Route path="/Animals" element={<Animals />} />
                         <Route path="/Events" element={<Events />} />
                         <Route path="/LogOut" element={<LogOut />} />
-                        <Route path="/AnimalChart" element={<AnimalChart />} />
-                       
+                        <Route path="/AnimalChart" element={<AnimalChart />} />      
                         <Route path="/Milk" element={<Milk />} />
                         <Route path="/Meat" element={<Meat />} />
                         <Route path="/Inventory" element={<Inventory />} />                        
@@ -383,7 +380,7 @@ const App = () => {
               
             </div>
 
-            <AppConfig
+            {/* <AppConfig
                 configActive={configActive}
                 menuMode={menuMode}
                 onMenuModeChange={onMenuModeChange}
@@ -397,7 +394,7 @@ const App = () => {
                 onRippleChange={onRippleChange}
                 inputStyle={inputStyle}
                 onInputStyleChange={onInputStyleChange}
-            ></AppConfig>
+            ></AppConfig> */}
 
             {staticMenuMobileActive && <div className="layout-mask"></div>}
         </div>
