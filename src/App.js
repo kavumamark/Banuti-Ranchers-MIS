@@ -28,6 +28,7 @@ import { LogOut } from './pages/LogOut';
 import AnimalChart from './pages/AnimalChart';
 import Meat from './pages/Meat';
 import Milk from './pages/Milk';
+import Inventory from './pages/Inventory';
 
 
 const App = () => {
@@ -68,17 +69,11 @@ const App = () => {
         { path: '/Milk', parent: 'Milk', label: 'Milk' },
         { path: '/Meat', parent: 'Meat', label: 'Meat' },
         { path: '/Breeds', parent: 'Breeds', label: 'Animal Breeds' },
+        { path: '/Inventory', parent: 'Inventory', label: 'Inventory' },
         // { path: '/Clients', parent: 'Clients', label: 'Clients' },
         // { path: '/Roles', parent: 'Roles', label: 'Roles' },
         // { path: '/MenuDemo', parent: 'Clients', label: 'View Client' },
-        // { path: '/ViewCase', parent: 'ViewCase', label: 'View Case' },
-        // { path: '/SystemUsers', parent: 'SystemUsers', label: 'System Users' },
-        // { path: '/Cases', parent: 'Cases', label: 'Cases' },
-        // { path: '/menu', parent: 'UI Kit', label: 'Company Information' },
-        // { path: '/menu/seat', parent: 'UI Kit', label: 'Contact Person' },
-        // { path: '/menu/payment', parent: 'UI Kit', label: 'Product Lines' },
-        // { path: '/menu/confirmation', parent: 'UI Kit', label: 'Communications' },
-        // { path: '/menu/case', parent: 'UI Kit', label: 'Cases' },
+        
     ];
 
     const menu = [
@@ -118,6 +113,11 @@ const App = () => {
                     label: 'Calendar',
                     icon: 'pi pi-fw pi-calendar-plus',
                     items: [{ label: 'Events', icon: 'pi pi-fw pi-calendar-plus', to: '/Events' }]
+                },
+                {
+                    label: 'Inventory Management',
+                    icon: 'pi pi-fw pi-bar',
+                    items: [{ label: 'Inventory', icon: 'pi pi-fw pi-bar', to: '/Inventory' }]
                 },
          {
             label: 'LogOut',
@@ -372,6 +372,7 @@ const App = () => {
                         <Route path="/AnimalChart" element={<AnimalChart />} />      
                         <Route path="/Milk" element={<Milk />} />
                         <Route path="/Meat" element={<Meat />} />
+                        <Route path="/Inventory" element={<Inventory />} />                        
                        <Route path="/Breeds" element={<Breeds />} />
                     </Routes>
                 </div>
