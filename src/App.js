@@ -30,6 +30,7 @@ import Meat from './pages/Meat';
 import Milk from './pages/Milk';
 import MenuDemo from './pages/MenuDemo';
 import SeatDemo from './components/menu/SeatDemo';
+import Inventory from './pages/Inventory';
 
 
 const App = () => {
@@ -74,6 +75,11 @@ const App = () => {
         { path: '/MenuDemo', parent: 'MenuDemo', label: 'View Staff' },
         { path: '/menu/seat', parent: 'UI Kit', label: 'Salary & Benefits' },
         { path: '/menu/case', parent: 'UI Kit', label: 'Cases' },
+        { path: '/Inventory', parent: 'Inventory', label: 'Inventory' },
+        // { path: '/Clients', parent: 'Clients', label: 'Clients' },
+        // { path: '/Roles', parent: 'Roles', label: 'Roles' },
+        // { path: '/MenuDemo', parent: 'Clients', label: 'View Client' },
+        
     ];
 
     const menu = [
@@ -121,7 +127,25 @@ const App = () => {
                 { label: 'Staff', icon: 'pi pi-fw pi-bars', to: '/Clients' },
             ]
             },
-        {
+              
+                {
+                    label: 'Information Bank',
+                    icon: 'pi pi-fw pi-bar',
+                    items: [{ label: 'Information Bank', icon: 'pi pi-fw pi-home', to: '/InformationBank' },
+                    { label: 'AnimalChart', icon: 'pi pi-fw pi-sitemap', to: '/AnimalChart' }]
+                },
+
+                {
+                    label: 'Calendar',
+                    icon: 'pi pi-fw pi-calendar-plus',
+                    items: [{ label: 'Events', icon: 'pi pi-fw pi-calendar-plus', to: '/Events' }]
+                },
+                {
+                    label: 'Inventory Management',
+                    icon: 'pi pi-fw pi-bar',
+                    items: [{ label: 'Inventory', icon: 'pi pi-fw pi-bar', to: '/Inventory' }]
+                },
+         {
             label: 'LogOut',
             icon: 'pi pi-fw pi-bar',
             items: [{ label: 'Log out', icon: 'pi pi-fw pi-sign-out', to: '/Login' }]
@@ -379,6 +403,8 @@ const App = () => {
                         <Route path="/MenuDemo" element={<MenuDemo />} />
                         <Route path="/SeatDemo" element={<SeatDemo />} />
                         <Route path="/CaseDemo" element={<CaseDemo />} />
+                        <Route path="/Inventory" element={<Inventory />} />                        
+                      
                     </Routes>
                 </div>
 
