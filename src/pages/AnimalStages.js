@@ -128,7 +128,7 @@ function AnimalStages() {
                         sortMode="single" sortField="animal_name" sortOrder={1} >
                         <Column header="No." headerStyle={{ width: '3rem' }} body={(data, options) => options.rowIndex + 1}></Column>
                         <Column field="animal_name" header="Animal Category" style={{ minWidth: '200px' }}></Column>
-                        <Column field="gender" header="Gender" style={{ minWidth: '150px' }}></Column>
+                        <Column field="gender" header="Breed" style={{ minWidth: '150px' }}></Column>
                         <Column field="stages" header="Stages" style={{ minWidth: '150px' }}></Column>
                         <Column field="options" header="Actions" body={<><Link to={"/ViewStage"} style={{ color: 'green' }}>View</Link> </>} ></Column>
                         
