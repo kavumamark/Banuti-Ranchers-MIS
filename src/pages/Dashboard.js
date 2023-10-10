@@ -36,7 +36,7 @@ const chartData = {
             tension: 0.4
         },
         {
-            label: 'New Users',
+            label: 'Newborns',
             data: [3, 7, 2, 17, 15, 13, 19],
             borderColor: ['#66BB6A'],
             borderWidth: 3,
@@ -122,7 +122,7 @@ const Dashboard = () => {
                 <div className="col-12 lg:col-6 xl:col-3">
                     <div className="overview-box users">
                         <i className="overview-icon pi pi-users"></i>
-                        <span className="overview-title">Alive Animals</span>
+                        <span className="overview-title">Current Animals</span>
                         <i className="overview-arrow pi pi-chevron-circle-up"></i>
                         <div className="overview-numbers">9522</div>
                         <div className="overview-subinfo">7% more than last month</div>
@@ -131,7 +131,7 @@ const Dashboard = () => {
                 <div className="col-12 lg:col-6 xl:col-3">
                     <div className="overview-box checkin">
                         <i className="overview-icon pi pi-map-marker"></i>
-                        <span className="overview-title">Dead Animals</span>
+                        <span className="overview-title">Mortalities</span>
                         <i className="overview-arrow pi pi-chevron-circle-up"></i>
                         <div className="overview-numbers">8</div>
                         <div className="overview-subinfo">10% more than last month</div>

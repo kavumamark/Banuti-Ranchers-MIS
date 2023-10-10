@@ -4,13 +4,11 @@ import { Column } from 'primereact/column';
 import NodeService from '../service/NodeService';
 
 const Milk = () => {
-    const [setTreeNodes] = useState([]);
     const [treeTableNodes, setTreeTableNodes] = useState([]);
     const [selectedTreeTableNodeKeys, setSelectedTreeTableNodeKeys] = useState([]);
 
     useEffect(() => {
         const nodeService = new NodeService();
-        nodeService.getTreeNodes().then((data) => setTreeNodes(data));
         nodeService.getTreeTableNodes().then((data) => setTreeTableNodes(data));
     }, []);
 

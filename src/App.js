@@ -28,6 +28,8 @@ import { LogOut } from './pages/LogOut';
 import AnimalChart from './pages/AnimalChart';
 import Meat from './pages/Meat';
 import Milk from './pages/Milk';
+import Sales from './pages/Sales';
+import Orders from './pages/Orders';
 
 
 const App = () => {
@@ -68,8 +70,8 @@ const App = () => {
         { path: '/Milk', parent: 'Milk', label: 'Milk' },
         { path: '/Meat', parent: 'Meat', label: 'Meat' },
         { path: '/Breeds', parent: 'Breeds', label: 'Animal Breeds' },
-        // { path: '/Clients', parent: 'Clients', label: 'Clients' },
-        // { path: '/Roles', parent: 'Roles', label: 'Roles' },
+         { path: '/Sales', parent: 'Sales', label: 'Sales' },
+        { path: '/Orders', parent: 'Orders', label: 'Orders' },
         // { path: '/MenuDemo', parent: 'Clients', label: 'View Client' },
         // { path: '/ViewCase', parent: 'ViewCase', label: 'View Case' },
         // { path: '/SystemUsers', parent: 'SystemUsers', label: 'System Users' },
@@ -106,6 +108,15 @@ const App = () => {
                     items: [
                       { label: 'Milk', icon: 'pi pi-fw pi-bars', to: '/Milk' },
                       { label: 'Meat', icon: 'pi pi-fw pi-bars', to: '/Meat' },
+                    ]
+                },
+
+                {
+                    label: 'Finance Management',
+                    icon: 'pi pi-fw pi-cog',
+                    items: [
+                      { label: 'Orders', icon: 'pi pi-fw pi-bars', to: '/Orders' },
+                      { label: 'Sales', icon: 'pi pi-fw pi-bars', to: '/Sales' },
                     ]
                 },
               
@@ -375,9 +386,9 @@ const App = () => {
                        
                         <Route path="/Milk" element={<Milk />} />
                         <Route path="/Meat" element={<Meat />} />
-                         {/*  <Route path="/Cases" element={<Cases />} />
-                        <Route path="/SystemUsers" element={<SystemUsers />} />
-                        <Route path="/Roles" element={<Roles />} />                       
+                        <Route path="/Sales" element={<Sales />} />
+                        <Route path="/Orders" element={<Orders/>} />
+                        {/*<Route path="/Roles" element={<Roles />} />                       
                         <Route path="/menu/*" element={<MenuDemo />} /> 
                         <Route path="/ViewCase" element={<ViewCase />} />                        */}
                        <Route path="/Breeds" element={<Breeds />} />
