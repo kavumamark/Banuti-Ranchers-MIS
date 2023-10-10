@@ -4,8 +4,7 @@ import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
 
 
 import AppTopbar from './AppTopbar';
-import AppFooter from './AppFooter';
-import AppConfig from './AppConfig';
+import CaseDemo from './components/menu/CaseDemo';
 import AppMenu from './AppMenu';
 import AppBreadcrumb from './AppBreadcrumb';
 import AppInlineProfile from './AppInlineProfile';
@@ -15,6 +14,7 @@ import Animals from './pages/Animals';
 import Breeds from './pages/Breeds';
 import Events from './pages/Events';
 import View from './pages/View';
+import Clients from './pages/Clients';
 import PrimeReact from 'primereact/api';
 import { Tooltip } from 'primereact/tooltip';
 import 'primereact/resources/primereact.min.css';
@@ -30,6 +30,10 @@ import Meat from './pages/Meat';
 import Milk from './pages/Milk';
 import Sales from './pages/Sales';
 import Orders from './pages/Orders';
+import MenuDemo from './pages/MenuDemo';
+import SeatDemo from './components/menu/SeatDemo';
+import Inventory from './pages/Inventory';
+
 
 
 const App = () => {
@@ -66,21 +70,21 @@ const App = () => {
         { path: '/View', parent: 'View', label: 'View ' },
         { path: '/AnimalChart', parent: 'AnimalChart', label: 'Animal Chart' },
         { path: '/LogOut', parent: 'LogOut', label: 'Log out' },
-        
         { path: '/Milk', parent: 'Milk', label: 'Milk' },
         { path: '/Meat', parent: 'Meat', label: 'Meat' },
         { path: '/Breeds', parent: 'Breeds', label: 'Animal Breeds' },
          { path: '/Sales', parent: 'Sales', label: 'Sales' },
         { path: '/Orders', parent: 'Orders', label: 'Orders' },
+        { path: '/Clients', parent: 'Clients', label: 'Clients' },
+        { path: '/menu', parent: 'UI Kit', label: 'Personal Information' },
+        { path: '/MenuDemo', parent: 'MenuDemo', label: 'View Staff' },
+        { path: '/menu/seat', parent: 'UI Kit', label: 'Salary & Benefits' },
+        { path: '/menu/case', parent: 'UI Kit', label: 'Cases' },
+        { path: '/Inventory', parent: 'Inventory', label: 'Inventory' },
+        // { path: '/Clients', parent: 'Clients', label: 'Clients' },
+        // { path: '/Roles', parent: 'Roles', label: 'Roles' },
         // { path: '/MenuDemo', parent: 'Clients', label: 'View Client' },
-        // { path: '/ViewCase', parent: 'ViewCase', label: 'View Case' },
-        // { path: '/SystemUsers', parent: 'SystemUsers', label: 'System Users' },
-        // { path: '/Cases', parent: 'Cases', label: 'Cases' },
-        // { path: '/menu', parent: 'UI Kit', label: 'Company Information' },
-        // { path: '/menu/seat', parent: 'UI Kit', label: 'Contact Person' },
-        // { path: '/menu/payment', parent: 'UI Kit', label: 'Product Lines' },
-        // { path: '/menu/confirmation', parent: 'UI Kit', label: 'Communications' },
-        // { path: '/menu/case', parent: 'UI Kit', label: 'Cases' },
+        
     ];
 
     const menu = [
@@ -90,16 +94,31 @@ const App = () => {
             items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
         },
 
-        
+
         {
-         label: 'Animal Management',
-             icon: 'pi pi-fw pi-database',
-             items: [
-             { label: 'Animals', icon: 'pi pi-fw pi-bars', to: '/Animals' },
-             { label: 'Animal Workflows', icon: 'pi pi-fw pi-th-large', to: '/AnimalStages' },
-            { label: 'Animal Breeds', icon: 'pi pi-fw pi-ellipsis-v', to: '/Breeds' }
-         ]
-         },
+            label: 'Animal Management',
+            icon: 'pi pi-fw pi-database',
+            items: [
+                { label: 'Animals', icon: 'pi pi-fw pi-bars', to: '/Animals' },
+                { label: 'Animal Workflows', icon: 'pi pi-fw pi-th-large', to: '/AnimalStages' },
+                { label: 'Animal Breeds', icon: 'pi pi-fw pi-ellipsis-v', to: '/Breeds' }
+            ]
+        },
+        {
+            label: 'Production',
+            icon: 'pi pi-fw pi-cog',
+            items: [
+                { label: 'Milk', icon: 'pi pi-fw pi-bars', to: '/Milk' },
+                { label: 'Meat', icon: 'pi pi-fw pi-bars', to: '/Meat' },
+            ]
+        },
+
+        {
+            label: 'Information Bank',
+            icon: 'pi pi-fw pi-bar',
+            items: [{ label: 'Information Bank', icon: 'pi pi-fw pi-home', to: '/InformationBank' },
+            { label: 'AnimalChart', icon: 'pi pi-fw pi-sitemap', to: '/AnimalChart' }]
+        },
 
         
                   {
@@ -119,12 +138,24 @@ const App = () => {
                       { label: 'Sales', icon: 'pi pi-fw pi-bars', to: '/Sales' },
                     ]
                 },
+        {
+            label: 'Calendar',
+            icon: 'pi pi-fw pi-calendar-plus',
+            items: [{ label: 'Events', icon: 'pi pi-fw pi-calendar-plus', to: '/Events' }]
+        },
+        {
+            label: 'Staff Management',
+                icon: 'pi pi-fw pi-database',
+                items: [
+                { label: 'Staff', icon: 'pi pi-fw pi-bars', to: '/Clients' },
+            ]
+            },
               
                 {
                     label: 'Information Bank',
                     icon: 'pi pi-fw pi-bar',
                     items: [{ label: 'Information Bank', icon: 'pi pi-fw pi-home', to: '/InformationBank' },
-                    { label: 'AnimalChart', icon: 'pi pi-fw pi-home', to: '/AnimalChart' }]
+                    { label: 'AnimalChart', icon: 'pi pi-fw pi-sitemap', to: '/AnimalChart' }]
                 },
 
                 {
@@ -132,13 +163,18 @@ const App = () => {
                     icon: 'pi pi-fw pi-calendar-plus',
                     items: [{ label: 'Events', icon: 'pi pi-fw pi-calendar-plus', to: '/Events' }]
                 },
+                {
+                    label: 'Inventory Management',
+                    icon: 'pi pi-fw pi-bar',
+                    items: [{ label: 'Inventory', icon: 'pi pi-fw pi-bar', to: '/Inventory' }]
+                },
          {
             label: 'LogOut',
             icon: 'pi pi-fw pi-bar',
             items: [{ label: 'Log out', icon: 'pi pi-fw pi-sign-out', to: '/Login' }]
         }
-        
-        
+
+
     ];
 
     useEffect(() => {
@@ -351,14 +387,14 @@ const App = () => {
                 isHorizontal={isHorizontal()}
                 profileMode={profileMode}
                 isMobile={isMobile}
-                
+
             />
-            
+
 
             <div className={menuContainerClassName} onClick={onMenuClick}>
                 <div className="layout-menu-logo">
-                    <button className="p-link" onClick={() => navigate('/')}>                        
-                        <img id="layout-menu-logo" src="assets/layout/images/logo-white.png" style={{height: '70%'}} library="babylon-layout" alt="babylon-logo" />
+                    <button className="p-link" onClick={() => navigate('/')}>
+                        <img id="layout-menu-logo" src="assets/layout/images/logo-white.png" style={{ height: '70%' }} library="babylon-layout" alt="babylon-logo" />
                     </button>
                 </div>
                 <div className="layout-menu-wrapper">
@@ -383,22 +419,29 @@ const App = () => {
                         <Route path="/Events" element={<Events />} />
                         <Route path="/LogOut" element={<LogOut />} />
                         <Route path="/AnimalChart" element={<AnimalChart />} />
-                       
                         <Route path="/Milk" element={<Milk />} />
+                        <Route path="/Clients" element={<Clients />} />
                         <Route path="/Meat" element={<Meat />} />
                         <Route path="/Sales" element={<Sales />} />
                         <Route path="/Orders" element={<Orders/>} />
                         {/*<Route path="/Roles" element={<Roles />} />                       
                         <Route path="/menu/*" element={<MenuDemo />} /> 
                         <Route path="/ViewCase" element={<ViewCase />} />                        */}
-                       <Route path="/Breeds" element={<Breeds />} />
+                       
+
+                        <Route path="/Breeds" element={<Breeds />} />
+                        <Route path="/MenuDemo" element={<MenuDemo />} />
+                        <Route path="/SeatDemo" element={<SeatDemo />} />
+                        <Route path="/CaseDemo" element={<CaseDemo />} />
+                        <Route path="/Inventory" element={<Inventory />} />                        
+                      
                     </Routes>
                 </div>
 
-              
+
             </div>
 
-            <AppConfig
+            {/* <AppConfig
                 configActive={configActive}
                 menuMode={menuMode}
                 onMenuModeChange={onMenuModeChange}
@@ -412,7 +455,7 @@ const App = () => {
                 onRippleChange={onRippleChange}
                 inputStyle={inputStyle}
                 onInputStyleChange={onInputStyleChange}
-            ></AppConfig>
+            ></AppConfig> */}
 
             {staticMenuMobileActive && <div className="layout-mask"></div>}
         </div>

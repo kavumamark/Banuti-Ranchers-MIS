@@ -9,6 +9,7 @@ const Milk = () => {
 
     useEffect(() => {
         const nodeService = new NodeService();
+        //nodeService.getTreeNodes().then((data) => setTreeNodes(data));
         nodeService.getTreeTableNodes().then((data) => setTreeTableNodes(data));
     }, []);
 
