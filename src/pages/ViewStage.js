@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {useState } from 'react';
 import { Button } from 'primereact/button';
 import { Fieldset } from 'primereact/fieldset';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,8 @@ import { Dropdown } from 'primereact/dropdown';
 const ViewStage = () => {
 
     const [displayBasic, setDisplayBasic] = useState(false);
+    //const [setItem] = useState(null);
+    
     const [Item, setItem] = useState(null);
 
     const Items = [
